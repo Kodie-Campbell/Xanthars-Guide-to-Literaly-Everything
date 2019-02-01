@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # use twitter bootstrap for front end ui and layout
 gem 'bootstrap-sass'
 
+# use Font Awsome sass gem for adding icons
+gem 'font-awesome-sass', '~> 5.6.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
