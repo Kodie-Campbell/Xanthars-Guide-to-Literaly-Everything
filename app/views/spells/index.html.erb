@@ -1,0 +1,13 @@
+Cantrips <br>
+<% @spells.each do |spell| %>
+	<% if spell.Level == 1 %>
+		<%= spell.name %> <br>
+	<% end %>
+<% end %>
+
+Level 9 <br>
+<% @spells.each do |spell| %>
+	<% if spell.Level == 9 %>
+		<%= spell.name %> <br>
+	<% end %>
+<% end %>
