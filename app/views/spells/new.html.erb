@@ -11,12 +11,23 @@
 					<!-- level -->
 					<div class='form-group'>
 						<%= f.label :Level %>
-						<%= f.select(:Level, options_for_select([['0',1],['1',2],['2',3],['3',4],['4',5],['5',6],['6',7],['7',8],['8',9],['9',10]])) %>
+						<%= f.select(:Level, options_for_select([['0',0],['1',1],['2',2],['3',3],['4',4],['5',5],['6',6],['7',7],['8',8],['9',9]])) %>
 					</div>
+					<!-- Concentration -->
+					<div class='form-group'>
+						<%= f.check_box(:Concentration) %>
+						<%= label_tag(:Concentration, 'Concentration') %>
+					</div>
+					<!-- Ritual -->
+					<div class='form-group'>
+						<%= f.check_box(:Ritual) %>
+						<%= label_tag(:Ritual, 'Ritual') %>
+					</div>
+
 					<!-- School -->
 					<div class='form-group'>
 						<%= f.label :School %>
-						<%= f.select(:school, options_for_select([['Abjuration',1],['Conjuration',2],['Divination',3],['Enchantment',4],['Evocation',5],['Illusion',6],['Necromancy',7],['Transmutation',8]])) %>
+						<%= f.select(:school, options_for_select([['Abjuration','Abjuration'],['Conjuration','Conjuration'],['Divination','Divination'],['Enchantment','Enchantment'],['Evocation','Evocation'],['Illusion','Illusion'],['Necromancy','Necromancy'],['Transmutation','Transmutation']])) %>
 					</div>
 					<!--class make check box selection --> 
 					<div class='form-group'>
@@ -43,16 +54,21 @@
 					<!-- casting time  -->
 					<div class='form-group'>
 						<%= f.label :'Cast Time' %>
-						<%= f.select(:'cast time', options_for_select([['1 Action',1],['1 Bonus',2],['1 Reaction',3],['1 Minute',4],[  '10 Minutes',5],['1 Hour',6],['8 Hours',7],['12 Hours',8],['24 Hours',9]])) %>
+						<%= f.select(:'cast time', options_for_select([['1 Action','1 Action'],['1 Bonus','1 Bonus'],['1 Reaction','1 Reaction'],['1 Minute','1 Minute'],['10 Minutes','10 Minutes'],['1 Hour','1 Hour'],['8 Hours','8 Hours'],['12 Hours','12 Hours'],['24 Hours','24 Hours']])) %>
 					</div>
 					<!-- range -->
 					<div class='form-group'>
 						<%= f.label :'Distance' %>
 						<br>
-						<%= f.select(:Range, options_for_select([[:include_blank => true],['Self',1],['Touch',2]])) %>
+						<%= f.select(:Range, options_for_select([[:include_blank => true],['Self','Self'],['Touch','Touch']])) %>
 						<br>
 						<%= f.label :'range in feet'%>
 						<%= f.text_field :distance,  class: 'form-control'%>
+					</div>
+					<!-- Area of Effect -->
+					<div class='form-group'>
+						<%= f.label :Area %>
+						<%= f.text_field :Area, class: 'form-control' %>
 					</div>
 					<!-- components check box and comment  -->
 					<div class='form-group'>
@@ -73,18 +89,22 @@
 					<!-- duration -->
 					<div class='form-group'>
 						<%= f.label :'Duration' %>
-						<%= f.select(:'Duration', options_for_select([['Instantaneous',1],['1 Round',2],['1 Minute',3],['10 Minutes',4],[  '1 Hour',5],['8 Hours',6],['12 Hours',7],['24 Hours',8],['10 Days',9],['Special',10],['Until Dispelled',11]])) %>
+						<%= f.select(:'Duration', options_for_select([['Instantaneous','Instantaneous'],['1 Round','1 Round'],['1 Minute','1 Minute'],['10 Minutes','10 Minutes'],['1 Hour','1 Hour'],['8 Hours','8 Hours'],['12 Hours','12 Hours'],['24 Hours','24 Hours'],['10 Days','10 Days'],['Special','Special'],['Until Dispelled','Until Dispelled']])) %>
 					</div>
 					<!-- Attack or save  -->
 					<div class='form-group'>
 						<%= f.label :Attack %>
-						<%= f.select(:'Attack', options_for_select([['Melee',1],['Ranged',2],['Strength',3],['Dextarity',4],[  'Constitution',5],['Inteligence',6],['Wisdom',7],['Charisma',8],['None',9]])) %>
+						<%= f.select(:'Attack', options_for_select([['Melee','Melee'],['Ranged','Ranged'],['Strength','Strength'],['Dextarity','Dextarity'],['Constitution','Constitution'],['Inteligence','Inteligence'],['Wisdom','Wisdom'],['Charisma','Charisma'],['None','None']])) %>
 					</div>
 					<!-- source  -->
 					<div class='form-group'>
 						<%= f.label :'Source' %>
-						<%= f.select(:'Source', options_for_select([['Against the Giants',1],['Basic Rules',2],['Curse of Strahd',3],['Curse of Strahd: Character Options',4],[  'Dead in Thay',5],['Dungeon Masters Guide',6],['Elemental Evil Players Companion',7],['Guildmaster Guide to Ravnica',8],['Lost Laboratory of Kwalish',9],['Lost Mine of Phandelver',10],['Monster Manual',11],['Mordenkaines Tome of Foes',11],['Out of the Abyss',11],['Players Handbook',11],['Princes of the Apocalypse',11],[' Rise of Tiamat',11],['RRakkma',11],['Storm Kings Thunder',11],['Sword Coast Adventure Guide',11],['Tales from the Yawning Portal',11],['The Forge of Fury',11],['The hidden Shrine of Tamoachan',11],['The Sunless Citadel',11],['The Tortle Package',11],['Tomb of Annihilation',11],['Tomb of Horrors',11],['Unearthed Arcana',11],['Volos Guide to Monsters',11],['Waterdeep Heist',11],['Waterdeep Dungeon of the Mad Mage',11],['Wayfinders Guide to Eberron',11],['White Plume Mountain',11],['Xanathars Guide to Everything',11]])) %>
+						<%= f.select(:'Source', options_for_select([['Against the Giants','Against the Giants'],['Basic Rules','Basic Rules'],['Curse of Strahd','Curse of Strahd'],['Curse of Strahd: Character Options','Curse of Strahd: Character Options'],[  'Dead in Thay', 'Dead in Thay'],['Dungeon Masters Guide','Dungeon Masters Guide'],['Elemental Evil Players Companion','Elemental Evil Players Companion'],['Guildmaster Guide to Ravnica','Guildmaster Guide to Ravnica'],['Lost Laboratory of Kwalish','Lost Laboratory of Kwalish'],['Lost Mine of Phandelver','Lost Mine of Phandelver'],['Monster Manual','Monster Manual'],['Mordenkaines Tome of Foes','Mordenkaines Tome of Foes'],['Out of the Abyss','Out of the Abyss'],['Players Handbook','Players Handbook'],['Princes of the Apocalypse','Princes of the Apocalypse'],['Rise of Tiamat','Rise of Tiamat'],['Rakkma','Rakkma'],['Storm Kings Thunder','Storm Kings Thunder'],['Sword Coast Adventure Guide','Sword Coast Adventure Guide'],['Tales from the Yawning Portal','Tales from the Yawning Portal'],['The Forge of Fury','The Forge of Fury'],['The hidden Shrine of Tamoachan','The hidden Shrine of Tamoachan',],['The Sunless Citadel','The Sunless Citadel'],['The Tortle Package','The Tortle Package'],['Tomb of Annihilation','Tomb of Annihilation'],['Tomb of Horrors','Tomb of Horrors'],['Unearthed Arcana','Unearthed Arcana'],['Volos Guide to Monsters','Volos Guide to Monsters'],['Waterdeep Heist','Waterdeep Heist'],['Waterdeep Dungeon of the Mad Mage','Waterdeep Dungeon of the Mad Mage'],['Wayfinders Guide to Eberron','Wayfinders Guide to Eberron'],['White Plume Mountain','White Plume Mountain',],['Xanathars Guide to Everything','Xanathars Guide to Everything']])) %>
 					</div>
+					<!-- Page --> 
+					<div class='form-group'>
+						<%= f.label :Page %>
+						<%= f.text_field :Page, class: 'form-control' %>
 					<!-- description -->
 					<div class='form-group'>
 						<%= f.label :'Description' %>
