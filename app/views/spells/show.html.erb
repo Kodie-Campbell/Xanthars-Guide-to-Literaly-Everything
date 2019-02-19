@@ -3,23 +3,23 @@
 		<h3 class="text-center"><%= @spell.name %><br></h3>
 		<div class= 'col-md-6 col-md-offset-3'>
 			<div class='well'>
-				Level: 
+				<strong> Level:</strong>
 				<%= @spell.Level %>
 				<br>
-				Concentration: 
+				<strong>Concentration: </strong>
 				<% if @spell.Concentration == 1 %>
 					yes
 					<br>
 				<% end %>
-				Ritual: 
+				<strong>Ritual: </strong>
 				<% if @spell.Ritual == 1 %>
 					yes
 					<br>
 				<% end %>
-				School:
+				<strong>School:</strong>
 				<%= @spell.school %>
 				<br>
-				Class:
+				<strong>Class:</strong>
 				<% if @spell.Bard == 1 %>
 					Bard
 				<% end %>
@@ -45,10 +45,10 @@
 					Wizard
 				<% end %>
 				<br>
-				Casting Time: 
+				<strong>Casting Time: </strong>
 				<%= @spell.cast_time %>
 				<br>
-				Range:
+				<strong>Range:</strong>
 				<% if @spell.distance != nil %>
 					<%= @spell.distance %>
 				<% end %>
@@ -64,10 +64,10 @@
 					<%= ft %>
 				<% end %>
 				<br>
-				Area:
+				<strong>Area:</strong>
 				<%= @spell.Area %>
 				<br>
-				Components: 
+				<strong>Components: </strong>
 				<% if @spell.Verbal == 1 %>
 					V
 					
@@ -80,24 +80,24 @@
 					M
 					<br>
 				<% end %>
-				Other Components:
+				<strong>Other Components:</strong>
 				<% if @spell.Other_Components != nil %>
 						<%= @spell.Other_Components %>
 				<% end %>
 				<br>
-				Duration:
+				<strong>Duration:</strong>
 				<%= @spell.Duration %>
 				<br>
-				Attack/Save:
+				<strong>Attack/Save:</strong>
 				<%= @spell.Attack %>
 				<br>
-				Source:
+				<strong>Source:</strong>
 				<%= @spell.Source %>
 				<br>
-				Page: 
+				<strong>Page: </strong>
 				<%= @spell.Page %>
 				<br>
-				Description:
+				<strong>Description:</strong>
 				<%= @spell.Description %>
 				<br>
 			</div>
