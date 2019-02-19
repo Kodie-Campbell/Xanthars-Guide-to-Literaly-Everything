@@ -1,7 +1,9 @@
 <h3> Cantrips </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 0 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -9,7 +11,9 @@
 <h3> Level 1</h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 1 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -17,7 +21,9 @@
 <h3> Level 2 </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 2 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -25,7 +31,9 @@
 <h3> Level 3 </h3><br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 3 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -33,7 +41,9 @@
 <h3> Level 4 </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 4 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -41,7 +51,9 @@
 <h3> Level 5 </h3><br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 5 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -49,7 +61,9 @@
 <h3> Level 6 </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 6 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -57,7 +71,9 @@
 <h3> Level 7 </h3><br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 7 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -65,7 +81,9 @@
 <h3> Level 8 </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 8 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>
 <br>
@@ -73,6 +91,8 @@
 <h3> Level 9 </h3> <br>
 <% @spells.each do |spell| %>
 	<% if spell.Level == 9 %>
-		<%= spell.name %> <br>
+		<%= link_to spell do %>
+			<%= spell.name %> <br>
+		<% end %>
 	<% end %>
 <% end %>

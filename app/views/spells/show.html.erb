@@ -1,0 +1,106 @@
+<div class="container">
+	<div class="row">
+		<h3 class="text-center"><%= @spell.name %><br></h3>
+		<div class=col-md-6 col-md-offset-3'>
+			<div class='well'>
+				Level: 
+				<%= @spell.Level %>
+				<br>
+				Concentration: 
+				<% if @spell.Concentration == 1 %>
+					yes
+					<br>
+				<% end %>
+				Ritual: 
+				<% if @spell.Ritual == 1 %>
+					yes
+					<br>
+				<% end %>
+				School:
+				<%= @spell.school %>
+				<br>
+				Class:
+				<% if @spell.Bard == 1 %>
+					Bard
+				<% end %>
+				<% if @spell.Cleric == 1 %>
+					Cleric
+				<% end %>
+				<% if @spell.Druid == 1 %>
+					Druid
+				<% end %>
+				<% if @spell.Paladin == 1 %>
+					Paladin
+				<% end %>
+				<% if @spell.Ranger == 1 %>
+					Ranger
+				<% end %>
+				<% if @spell.Sorcerer == 1 %>
+					Sorcerer
+				<% end %>
+				<% if @spell.Warlock == 1 %>
+					Warlock
+				<% end %>
+				<% if @spell.Warlock == 1 %>
+					Wizard
+				<% end %>
+				<br>
+				Casting Time: 
+				<%= @spell.cast_time %>
+				<br>
+				Range:
+				<% if @spell.distance != nil %>
+					<%= @spell.distance %>
+				<% end %>
+				<% if @spell.distance != nil %>
+					
+
+				<% end %>
+				<% if @spell.Range != nil %>
+					<%= @spell.Range %>
+				<% end %>
+				<% if @spell.Range.blank? %>
+					<% ft = 'ft' %>
+					<%= ft %>
+				<% end %>
+				<br>
+				Area:
+				<%= @spell.Area %>
+				<br>
+				Components: 
+				<% if @spell.Verbal == 1 %>
+					V
+					
+				<% end %>
+				<% if @spell.Somatic == 1 %>
+					S
+					
+				<% end %>
+				<% if @spell.Material == 1 %>
+					M
+					<br>
+				<% end %>
+				Other Components:
+				<% if @spell.Other_Components != nil %>
+						<%= @spell.Other_Components %>
+				<% end %>
+				<br>
+				Duration:
+				<%= @spell.Duration %>
+				<br>
+				Attack/Save:
+				<%= @spell.Attack %>
+				<br>
+				Source:
+				<%= @spell.Source %>
+				<br>
+				Page: 
+				<%= @spell.Page %>
+				<br>
+				Description:
+				<%= @spell.Description %>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>

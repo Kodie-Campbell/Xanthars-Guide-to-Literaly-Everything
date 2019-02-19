@@ -18,6 +18,11 @@ class SpellsController < ApplicationController
 		@spells = Spell.order("name")
 		
 	end 
+
+	def show
+		@spell = Spell.find( params[:id])
+	end
+
 	private
 		def spell_params
 			params.require(:spell).permit(:name, :Level, :school, :Bard, :Cleric, :Druid, :Paladin, :Ranger, :Sorcerer, :Warlock, :Wizard, :'cast time', :Range, :distance, :Verbal, :Somatic, :Material, :'Other Components', :Duration, :Attack, :Source, :Description, :Concentration, :Ritual, :Area, :Page)
