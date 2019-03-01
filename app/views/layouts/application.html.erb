@@ -26,6 +26,13 @@
             <li><%= link_to "New spell", new_spell_path %></li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Spells", spells_path %></li>
+            <% if user_signed_in? %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+              <%= link_to "Change Password", edit_user_registration_path, class: "btn btn-default" %>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
+              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default" %>
+            <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>

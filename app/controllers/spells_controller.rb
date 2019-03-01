@@ -1,4 +1,6 @@
 class SpellsController < ApplicationController
+	before_action :authenticate_user!
+
 	def new
 		@spell = Spell.new
 	end
